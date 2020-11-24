@@ -1,0 +1,12 @@
+.u-img-height50rem{
+    object-fit: cover;
+    object-position: bottom;
+    height: 50rem;
+    margin-bottom: 5%;
+    @include mq(md){
+        height: 30rem;
+    }
+    @include mq(sm){
+        height: 15rem;
+    }
+}

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'mplus-1m-regular';
+    src: url(../fonts/mplus-1m-regular.ttf);
+}
+
+html{
+    overflow: auto;
+}
+body {
+    font-family:
+    'mplus-1m-regular','M+ C Type-1 (basic latin) Regular',
+    'M+ Type-1 (general-j) Regular', sans-serif;
+    button:focus {
+        outline:0;
+    }
+}
+
+img{
+    width:100%;
+}
+
+/*
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する為、
+
+htmlにoverflow:auto
+bodyにoverflow:hiddenを設定している
+
+*/

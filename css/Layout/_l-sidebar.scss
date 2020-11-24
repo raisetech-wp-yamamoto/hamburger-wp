@@ -1,0 +1,13 @@
+.l-sidebar{
+    padding:15%;
+    background-color: #F2EDE9;
+    height: 100%;
+}
+
+@include mq(md){
+    .l-sidebar{
+        .c-title--side-menu{
+            visibility: hidden;
+        }
+    }
+}

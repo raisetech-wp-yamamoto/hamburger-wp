@@ -1,0 +1,48 @@
+.l-header{
+    display: flex;
+    align-items:center;
+    height: 200px;
+    background-color: #FFF7EF;
+    .c-title{
+        margin-left: 4.2%;
+        &--side-menu{
+            cursor: pointer;
+            display: none;/*ヘッダー内のMenuはlgでは表示しない*/
+            position: absolute;
+            margin-bottom: 0;/*サイドメニュー上に表示してた時のmarginを解除*/
+            right: 3%;
+            top: 1%;
+        }
+    }
+    .c-search{
+        margin-right: 1.9%;
+    }
+}
+
+@include mq(md){
+    .l-header{
+        flex-flow: column;/*flex要素を縦に並べる*/
+        justify-content: center;/*縦中央寄せ*/
+        .c-title{
+            margin-left: 0;/*タイトルの左にあけた空間(1.9%)を解除*/
+            margin-bottom: 5%;
+            &--side-menu{
+                display: block;/*ヘッダー内のMenuはmdでは表示する*/
+            }
+        }
+        .c-search{
+            margin-right: 0;/*検索ボックスとボタンの右端にあけた空間(1.9%)を解除*/
+            margin-left: 0;/*検索ボックスとボタンの右端寄せを解除*/
+        }
+    }
+}
+
+@include mq(sm){
+    .l-header{
+        .c-title{
+            &--side-menu{
+                font-size: 2rem;
+            }
+        }
+    }
+}

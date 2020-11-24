@@ -1,0 +1,964 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'mplus-1m-regular';
+  src: url(../fonts/mplus-1m-regular.ttf);
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+}
+
+body button:focus {
+  outline: 0;
+}
+
+img {
+  width: 100%;
+}
+
+/*
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する為、
+
+htmlにoverflow:auto
+bodyにoverflow:hiddenを設定している
+
+*/
+.l-bg {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: calc(100% + 100px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.l-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  background-color: #FFF7EF;
+}
+
+.l-header .c-title {
+  margin-left: 4.2%;
+}
+
+.l-header .c-title--side-menu {
+  cursor: pointer;
+  display: none;
+  /*ヘッダー内のMenuはlgでは表示しない*/
+  position: absolute;
+  margin-bottom: 0;
+  /*サイドメニュー上に表示してた時のmarginを解除*/
+  right: 3%;
+  top: 1%;
+}
+
+.l-header .c-search {
+  margin-right: 1.9%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    /*flex要素を縦に並べる*/
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /*縦中央寄せ*/
+  }
+  .l-header .c-title {
+    margin-left: 0;
+    /*タイトルの左にあけた空間(1.9%)を解除*/
+    margin-bottom: 5%;
+  }
+  .l-header .c-title--side-menu {
+    display: block;
+    /*ヘッダー内のMenuはmdでは表示する*/
+  }
+  .l-header .c-search {
+    margin-right: 0;
+    /*検索ボックスとボタンの右端にあけた空間(1.9%)を解除*/
+    margin-left: 0;
+    /*検索ボックスとボタンの右端寄せを解除*/
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-header .c-title--side-menu {
+    font-size: 2rem;
+  }
+}
+
+.l-wrapper {
+  position: relative;
+  max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-wrapper__left {
+  width: 81%;
+}
+
+.l-wrapper__right {
+  width: 19%;
+  z-index: 200;
+}
+
+@media screen and (max-width: 834px) {
+  .l-wrapper__left {
+    width: 100%;
+  }
+  .l-wrapper__right {
+    display: none;
+    width: 40%;
+    position: absolute;
+    height: calc(100% + 100px);
+    /*フッターまで貫通してメニューを出すから+100px*/
+    right: -40%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-wrapper__right {
+    width: 90%;
+    right: -90%;
+  }
+}
+
+.l-main__front-page-contents {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.l-main__archive-page-contents {
+  background-color: #FFFDFA;
+  padding: 5%;
+}
+
+.l-main__single-page-contents {
+  background-color: #FFFDFA;
+  padding: 5%;
+  color: #3C2A10;
+}
+
+.l-main__single-page-contents > p {
+  font-size: 1.6rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h2 {
+  font-size: 3.6rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h3 {
+  font-size: 2.8rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h4 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h5 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h6 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents .c-blockquote {
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
+  margin-left: 10%;
+}
+
+.l-main__single-page-contents ul:nth-of-type(3) {
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 375px) {
+  .l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-main__front-page-contents {
+    display: block;
+  }
+  .l-main__archive-page-contents {
+    display: block;
+  }
+}
+
+.l-sidebar {
+  padding: 15%;
+  background-color: #F2EDE9;
+  height: 100%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-sidebar .c-title--side-menu {
+    visibility: hidden;
+  }
+}
+
+.l-footer {
+  max-width: 1920px;
+  height: 100px;
+  background-color: #9D8670;
+  color: white;
+  text-align: center;
+}
+
+.l-footer__sitemap {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.l-footer__sitemap a {
+  text-decoration: none;
+  color: white;
+}
+
+.c-title {
+  font-family: 'Roboto', sans-serif;
+}
+
+.c-title--header {
+  color: #707070;
+  font-size: 5.5rem;
+}
+
+.c-title--side-menu {
+  color: #707070;
+  font-size: 3.4rem;
+  margin-bottom: 30%;
+}
+
+.c-title--front-page-card {
+  white-space: nowrap;
+  color: white;
+  font-size: 6rem;
+  padding: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-title--header {
+    font-size: 4rem;
+  }
+}
+
+.c-button {
+  cursor: pointer;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 5%;
+  background-color: #F2EDE9;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+@media screen and (max-width: 375px) {
+  .c-button {
+    display: block;
+    margin: 0 auto 5%;
+  }
+}
+
+.c-grid-img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-grid-img {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .c-grid-img {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.c-card-button {
+  display: block;
+  cursor: pointer;
+  background-color: white;
+  color: #707070;
+  border-radius: 40px;
+  width: 60%;
+  padding: 5%;
+  margin: auto;
+}
+
+.c-close-button {
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: normal;
+  display: none;
+}
+
+@media screen and (max-width: 834px) {
+  .c-close-button {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+  }
+}
+
+.c-menu dt {
+  font-size: 2.4rem;
+  margin: 4rem 0;
+}
+
+.c-menu dd {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+.c-blockquote {
+  font-size: 1.6rem;
+  background-color: #F5F5F5;
+  padding: 5%;
+}
+
+.c-blockquote p {
+  font-size: 1.6rem;
+  margin-bottom: 10%;
+}
+
+.c-pagenation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #707070;
+  margin-top: 5%;
+  list-style: none;
+}
+
+.c-pagenation * a {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: #707070;
+}
+
+.c-pagenation__current {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 0 5px;
+}
+
+.c-pagenation__prev {
+  font-size: 4rem;
+  margin: 0 5px 6px;
+}
+
+.c-pagenation__num {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 1px solid #707070;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  margin: 0 5px;
+}
+
+.c-pagenation__next {
+  font-size: 4rem;
+  margin: 0 5px 6px;
+}
+
+.c-pagenation :nth-child(3) {
+  background-color: #3C2B1C;
+}
+
+.c-pagenation :nth-child(3) a {
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  .c-pagenation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .c-pagenation__current {
+    display: none;
+  }
+  .c-pagenation__prev {
+    position: relative;
+  }
+  .c-pagenation__prev ::after {
+    position: absolute;
+    content: '前へ';
+    font-size: 1.6rem;
+    top: 3px;
+    right: -40px;
+  }
+  .c-pagenation__num {
+    display: none;
+  }
+  .c-pagenation__next {
+    position: relative;
+  }
+  .c-pagenation__next ::before {
+    position: absolute;
+    content: '次へ';
+    font-size: 1.6rem;
+    top: 3px;
+    left: -40px;
+  }
+}
+
+.c-page-description {
+  color: #3C2A10;
+  margin-bottom: 5%;
+}
+
+.c-page-description h2 {
+  font-size: 3.0rem;
+  margin-bottom: 2%;
+}
+
+.c-page-description p {
+  font-size: 1.6rem;
+}
+
+.c-archive-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3C2B1C;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.c-archive-page-card__img {
+  background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
+  background-size: cover;
+  width: 50%;
+}
+
+.c-archive-page-card__description {
+  width: 50%;
+  padding: 5%;
+}
+
+.c-archive-page-card__description h3 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+}
+
+.c-archive-page-card__description h4 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.c-archive-page-card__description p {
+  font-size: 1.6rem;
+  margin-bottom: 20%;
+  line-height: 2.1rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-archive-page-card__description h3 {
+    font-size: 2rem;
+  }
+  .c-archive-page-card__description h4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .c-archive-page-card {
+    display: block;
+  }
+  .c-archive-page-card__img {
+    width: 100%;
+    height: 230px;
+  }
+  .c-archive-page-card__description {
+    width: 100%;
+  }
+}
+
+.c-search {
+  margin-left: auto;
+  color: #707070;
+  position: relative;
+}
+
+.c-search__box {
+  border-radius: 10px;
+  width: 230px;
+  height: 40px;
+  border: 1px solid #707070;
+  padding-left: 48px;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.c-search__icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 2.5rem !important;
+}
+
+.c-search__button {
+  cursor: pointer;
+  margin-left: 14px;
+  width: 80px;
+  height: 40px;
+  background-color: #F2EDE9;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.c-code {
+  background-color: #F5F5F5;
+  margin-bottom: 5%;
+}
+
+.c-code code {
+  font-size: 1.6rem;
+}
+
+.c-table {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.c-table tr > td {
+  border: solid 1px #707070;
+  font-size: 1.6rem;
+  padding: 5%;
+}
+
+.c-table tr > :nth-child(1) {
+  width: 30%;
+}
+
+.c-table tr > :nth-child(2) {
+  width: 70%;
+}
+
+.c-sub-title {
+  color: white;
+}
+
+.c-single-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.c-single-page-card__img {
+  width: 45%;
+}
+
+.c-single-page-card__description {
+  width: 50%;
+}
+
+.c-single-page-card__description p {
+  font-size: 1.6rem;
+}
+
+.c-single-page-card--right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
+
+.c-map {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.c-map img {
+  width: 100%;
+  min-height: 200%;
+}
+
+.c-map__image img {
+  width: 100%;
+}
+
+.c-map__explanation {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 61%;
+  height: 100%;
+  padding: 3%;
+}
+
+.c-map__explanation h2 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.c-map__explanation hr {
+  width: 7.5rem;
+  border-width: 2px;
+  border-color: white;
+  margin: 5% 0;
+}
+
+.c-map__explanation p {
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-map__explanation {
+    width: 100%;
+  }
+}
+
+.c-list {
+  list-style: none;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.c-list li {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 375px) {
+  .c-list {
+    margin-left: 0;
+  }
+}
+
+.c-front-page-card {
+  overflow: hidden;
+  background-size: cover;
+  width: 50%;
+}
+
+.c-front-page-card hr {
+  border-width: 4px;
+  border-color: white;
+  width: 6.3rem;
+  margin-left: 5%;
+}
+
+.c-front-page-card--card1 {
+  background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+  margin-right: 5%;
+}
+
+.c-front-page-card--card2 {
+  background-image: url(../image/473d814b175bd517b56eb309f2958725.png);
+}
+
+.c-front-page-card__explanation {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3%;
+  color: #3C2A10;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.c-front-page-card__explanation h3 {
+  padding: 3%;
+  font-size: 2rem;
+}
+
+.c-front-page-card__explanation p {
+  padding: 3%;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .c-front-page-card {
+    width: 100%;
+  }
+  .c-front-page-card--card1 {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+}
+
+.p-main-visual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-main-visual .c-sub-title {
+  padding-left: 5%;
+}
+
+.p-main-visual--front-page {
+  padding: 15% 0;
+  background-image: url(../image/3ba5a44414bb3c0885c27ff614596431.png);
+  background-size: cover;
+}
+
+.p-main-visual--front-page .c-sub-title {
+  font-size: 4rem;
+}
+
+.p-main-visual--archive-page {
+  padding: 5% 0;
+  background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+  background-position: center center;
+  width: 100%;
+  position: relative;
+}
+
+.p-main-visual--archive-page__bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-main-visual--archive-page .c-sub-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.p-main-visual--archive-page p {
+  z-index: 1;
+  color: white;
+  margin-left: 1%;
+}
+
+.p-main-visual--single-page {
+  padding: 15% 0;
+  background-image: url(../image/ham-burger-with-vegetables-1639557.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.p-main-visual--single-page .c-sub-title {
+  font-size: 4rem;
+}
+
+.p-main-visual--about-page {
+  padding: 15% 0;
+  background-image: url(../image/black-steel-lamp-post-1070945.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.p-main-visual--about-page .c-sub-title {
+  font-size: 4rem;
+}
+
+.u-img-height50rem {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  height: 50rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .u-img-height50rem {
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .u-img-height50rem {
+    height: 15rem;
+  }
+}
+
+.u-size-581x358 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 581px;
+}
+
+.u-img-center {
+  margin-bottom: 5%;
+  text-align: center;
+  padding: 5%;
+}
+/*# sourceMappingURL=style.css.map */

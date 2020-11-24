@@ -1,0 +1,79 @@
+.c-pagenation{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: #707070;
+    margin-top: 5%;
+    list-style: none;
+    * a{
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        text-decoration: none;
+        color: #707070;
+    }
+    &__current{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin: 0 5px;
+    }
+    &__prev{
+        font-size: 4rem;
+        margin: 0 5px 6px;
+    }
+    &__num{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border:1px solid #707070 ;
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        margin: 0 5px;
+    }
+    &__next{
+        font-size: 4rem;
+        margin: 0 5px 6px;
+    }
+    :nth-child(3){
+        background-color: #3C2B1C;
+        a{
+            color: white;
+        }
+    }
+}
+
+
+@include mq(sm){
+    .c-pagenation{
+        justify-content: space-between;
+        &__current{
+            display: none;
+        }
+        &__prev{
+            position: relative;
+            ::after{
+                position: absolute;
+                content: '前へ';
+                font-size: 1.6rem;
+                top:3px;
+                right: -40px;
+            }
+        }
+        &__num{
+            display: none;
+        }
+        &__next{
+            position: relative;
+            ::before{
+                position: absolute;
+                content: '次へ';
+                font-size: 1.6rem;
+                top: 3px;
+                left: -40px;
+            }
+        }
+    }
+    
+}

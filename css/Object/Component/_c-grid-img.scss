@@ -1,0 +1,12 @@
+.c-grid-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 5%;
+    @include mq(md){
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mq(sm){
+        grid-template-columns: 1fr;
+    }
+}

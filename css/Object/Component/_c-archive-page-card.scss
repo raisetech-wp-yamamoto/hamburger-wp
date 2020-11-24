@@ -1,0 +1,55 @@
+.c-archive-page-card{
+    display: flex;
+    background-color: #3C2B1C;
+    color: white;
+    margin-bottom: 2rem;
+    &__img{
+        background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
+        background-size: cover;
+        width: 50%;
+    }
+    &__description{
+        width: 50%;
+        padding:5%;
+        h3{
+            font-size: 3.6rem;
+            margin-bottom: 5rem;
+        }
+        h4{
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+            margin-bottom: 20%;
+            line-height: 2.1rem;
+        }
+    }
+}
+
+@include mq(md){
+    .c-archive-page-card{
+        &__description{
+            h3{
+                font-size: 2rem;
+
+            }
+            h4{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@include mq(sm){
+    .c-archive-page-card{
+        display: block;
+        &__img{
+            width: 100%;
+            height: 230px;
+        }
+        &__description{
+            width: 100%;
+        }
+    }
+}
