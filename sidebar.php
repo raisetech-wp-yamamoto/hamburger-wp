@@ -1,29 +1,29 @@
 <div class="l-wrapper__right off">
     <aside class="l-sidebar">
         <h2 class="c-title c-title--side-menu">Menu</h2>
-        <h2 id="menu-close" class="c-close-button">~</h2>
+        <h2 id="menu-close" class="c-close-button">Ã—</h2>
         <dl class="c-menu">
-            <dt>ƒo[ƒK[</dt>
-            <dd>ƒnƒ“ƒo[ƒK[</dd>
-            <dd>ƒeƒŠƒ„ƒLƒo[ƒK[</dd>
-            <dd>ƒAƒ{ƒJƒhƒo[ƒK[</dd>
-            <dd>ƒtƒBƒbƒVƒ…ƒo[ƒK[</dd>
-            <dd>ƒx[ƒRƒ“ƒo[ƒK[</dd>
-            <dd>ƒ`ƒLƒ“ƒo[ƒK[</dd>
+            <dt>ãƒãƒ¼ã‚¬ãƒ¼</dt>
+            <dd>ãƒãƒ³ãƒãƒ¼ã‚¬ãƒ¼</dd>
+            <dd>ãƒ†ãƒªãƒ¤ã‚­ãƒãƒ¼ã‚¬ãƒ¼</dd>
+            <dd>ã‚¢ãƒœã‚«ãƒ‰ãƒãƒ¼ã‚¬ãƒ¼</dd>
+            <dd>ãƒ•ã‚£ãƒƒã‚·ãƒ¥ãƒãƒ¼ã‚¬ãƒ¼</dd>
+            <dd>ãƒ™ãƒ¼ã‚³ãƒ³ãƒãƒ¼ã‚¬ãƒ¼</dd>
+            <dd>ãƒã‚­ãƒ³ãƒãƒ¼ã‚¬ãƒ¼</dd>
 
-            <dt>ƒTƒCƒh</dt>
-            <dd>ƒ|ƒeƒg</dd>
-            <dd>ƒTƒ‰ƒ_</dd>
-            <dd>ƒiƒQƒbƒg</dd>
-            <dd>ƒR[ƒ“</dd>
+            <dt>ã‚µã‚¤ãƒ‰</dt>
+            <dd>ãƒãƒ†ãƒˆ</dd>
+            <dd>ã‚µãƒ©ãƒ€</dd>
+            <dd>ãƒŠã‚²ãƒƒãƒˆ</dd>
+            <dd>ã‚³ãƒ¼ãƒ³</dd>
 
-            <dt>ƒhƒŠƒ“ƒN</dt>
-            <dd>ƒR[ƒ‰</dd>
-            <dd>ƒtƒ@ƒ“ƒ^</dd>
-            <dd>ƒIƒŒƒ“ƒW</dd>
-            <dd>ƒAƒbƒvƒ‹</dd>
-            <dd>g’ƒiIce/Hotj</dd>
-            <dd>ƒR[ƒq[iIce/Hotj</dd>
+            <dt>ãƒ‰ãƒªãƒ³ã‚¯</dt>
+            <dd>ã‚³ãƒ¼ãƒ©</dd>
+            <dd>ãƒ•ã‚¡ãƒ³ã‚¿</dd>
+            <dd>ã‚ªãƒ¬ãƒ³ã‚¸</dd>
+            <dd>ã‚¢ãƒƒãƒ—ãƒ«</dd>
+            <dd>ç´…èŒ¶ï¼ˆIce/Hotï¼‰</dd>
+            <dd>ã‚³ãƒ¼ãƒ’ãƒ¼ï¼ˆIce/Hotï¼‰</dd>
         </dl>
     </aside>
 </div>

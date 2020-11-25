@@ -1,8 +1,9 @@
 <footer class="l-footer">
 	<div class="l-footer__sitemap">
-	    <a href="index.html">ショップ情報</a>
-	    |
-	    <a href="index.html">ヒストリー</a>
+		<a href="index.html">繧ｷ繝ｧ繝�繝玲ュ蝣ｱ</a>
+		|
+		<a href="index.html">繝偵せ繝医Μ繝ｼ</a>
 	</div>
 	<small>Copyright: RaiseTech</small>
+	<?php wp_footer(); ?>
 </footer>

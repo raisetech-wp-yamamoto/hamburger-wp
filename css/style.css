@@ -369,6 +369,11 @@ bodyにoverflow:hiddenを設定している
   font-size: 5.5rem;
 }
 
+.c-title--header a {
+  text-decoration: none;
+  color: #707070;
+}
+
 .c-title--side-menu {
   color: #707070;
   font-size: 3.4rem;

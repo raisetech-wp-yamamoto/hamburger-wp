@@ -1,17 +1,4 @@
 <?php get_header(); ?>
-<body>
-    <div class="l-wrapper">
-        <div class="l-wrapper__left">
-            <div class="l-bg"></div>
-            <header class="l-header">
-                <h2 id="menu" class="c-title c-title--side-menu">Menu</h2>
-                <h2 class="c-title c-title--header">Hamburger</h2>
-                <div class="c-search">
-                    <input type="text" class="c-search__box">
-                    <i class="fa fa-search c-search__icon" aria-hidden="true"></i>
-                    <input type="button" class="c-search__button" value="検索">
-                </div>
-            </header>
             <div class="l-main">
                 <div class="p-main-visual p-main-visual--front-page">
                     <h1 class="c-sub-title">ダミーサイト</h1>
@@ -43,7 +30,7 @@
                     </div>
                 </div>
                 <div class="c-map">
-                        <img src="image/map.png" alt="map">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/map.png" alt="map">
                         <div class="c-map__explanation">
                             <h2>見出しが入ります</h2>
                             <hr>
@@ -55,7 +42,6 @@
         <?php get_sidebar(); ?>
     </div>
     <?php get_footer(); ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="menu.js"></script>
+
 </body>
 </html>
