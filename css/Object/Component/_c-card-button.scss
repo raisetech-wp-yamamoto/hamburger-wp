@@ -2,9 +2,21 @@
     display: block;
     cursor: pointer;
     background-color: white;
-    color: #707070;
     border-radius: 40px;
     width: 60%;
-    padding: 5%;
+    height: 76px;
+    @include mq(md){
+        height: 42.5px;
+    }
     margin: auto;
+    a{
+        color: #707070;
+        display: block;
+        text-decoration: none;
+        line-height: 70px;//まったく同じ高さにしてしまうとずれたので少し小さくした
+        @include mq(md){
+            line-height: 37.5px;//まったく同じ高さにしてしまうとずれたので少し小さくした
+        }
+
+    }
 }

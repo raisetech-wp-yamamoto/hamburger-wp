@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: page-about
+*/
+?>
 <?php get_header(); ?>
             <div class="l-main">
                 <div class="p-main-visual p-main-visual--about-page">

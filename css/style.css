@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -264,6 +264,13 @@ bodyにoverflow:hiddenを設定している
 .l-main__archive-page-contents {
   background-color: #FFFDFA;
   padding: 5%;
+  color: #3C2A10;
+}
+
+.l-main__archive-page-contents > p {
+  font-size: 1.6rem;
+  margin-bottom: 5%;
+  line-height: 2.1rem;
 }
 
 .l-main__single-page-contents {
@@ -275,6 +282,7 @@ bodyにoverflow:hiddenを設定している
 .l-main__single-page-contents > p {
   font-size: 1.6rem;
   margin-bottom: 5%;
+  line-height: 2.1rem;
 }
 
 .l-main__single-page-contents h2 {
@@ -439,11 +447,29 @@ bodyにoverflow:hiddenを設定している
   display: block;
   cursor: pointer;
   background-color: white;
-  color: #707070;
   border-radius: 40px;
   width: 60%;
-  padding: 5%;
+  height: 76px;
   margin: auto;
+}
+
+@media screen and (max-width: 834px) {
+  .c-card-button {
+    height: 42.5px;
+  }
+}
+
+.c-card-button a {
+  color: #707070;
+  display: block;
+  text-decoration: none;
+  line-height: 70px;
+}
+
+@media screen and (max-width: 834px) {
+  .c-card-button a {
+    line-height: 37.5px;
+  }
 }
 
 .c-close-button {
@@ -482,6 +508,7 @@ bodyにoverflow:hiddenを設定している
 .c-blockquote p {
   font-size: 1.6rem;
   margin-bottom: 10%;
+  line-height: 2.1rem;
 }
 
 .c-pagenation {
@@ -589,6 +616,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-page-description p {
   font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 .c-archive-page-card {
@@ -735,6 +763,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-single-page-card__description p {
   font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 .c-single-page-card--right {

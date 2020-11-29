@@ -8,6 +8,12 @@
     &__archive-page-contents{
         background-color: #FFFDFA;
         padding:5%;
+        color:#3C2A10;
+        >p{
+            font-size: 1.6rem;
+            margin-bottom: 5%;
+            line-height: 2.1rem;
+        }
     }
     &__single-page-contents{
         background-color: #FFFDFA;
@@ -16,6 +22,7 @@
         >p{
             font-size: 1.6rem;
             margin-bottom: 5%;
+            line-height: 2.1rem;
         }
         h2{
             font-size: 3.6rem;
