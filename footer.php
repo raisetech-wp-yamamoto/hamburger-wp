@@ -2,7 +2,7 @@
 	<div class="l-footer__sitemap">
 		<a href="about">ショップ情報</a>
 		|
-		<a href="archive">ヒストリー</a>
+		<a href="history">ヒストリー</a>
 	</div>
 	<small>Copyright: RaiseTech</small>
 	<?php wp_footer(); ?>

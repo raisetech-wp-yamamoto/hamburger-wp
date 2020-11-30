@@ -9,14 +9,5 @@
         height: 42.5px;
     }
     margin: auto;
-    a{
-        color: #707070;
-        display: block;
-        text-decoration: none;
-        line-height: 70px;//まったく同じ高さにしてしまうとずれたので少し小さくした
-        @include mq(md){
-            line-height: 37.5px;//まったく同じ高さにしてしまうとずれたので少し小さくした
-        }
-
-    }
+    color: #707070;
 }

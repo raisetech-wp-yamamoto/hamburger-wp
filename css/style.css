@@ -451,24 +451,12 @@ bodyにoverflow:hiddenを設定している
   width: 60%;
   height: 76px;
   margin: auto;
+  color: #707070;
 }
 
 @media screen and (max-width: 834px) {
   .c-card-button {
     height: 42.5px;
-  }
-}
-
-.c-card-button a {
-  color: #707070;
-  display: block;
-  text-decoration: none;
-  line-height: 70px;
-}
-
-@media screen and (max-width: 834px) {
-  .c-card-button a {
-    line-height: 37.5px;
   }
 }
 
@@ -653,6 +641,10 @@ bodyにoverflow:hiddenを設定している
   font-size: 1.6rem;
   margin-bottom: 20%;
   line-height: 2.1rem;
+}
+
+.c-archive-page-card__description .more-link {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 834px) {
