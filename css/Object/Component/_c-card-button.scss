@@ -9,5 +9,13 @@
         height: 42.5px;
     }
     margin: auto;
-    color: #707070;
+    a{
+        display: block;
+        line-height: 7rem;
+        @include mq(md){
+            line-height: 37.5px;
+        }
+        text-decoration: none;
+        color: #707070;
+    }
 }

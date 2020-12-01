@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -451,12 +451,24 @@ bodyにoverflow:hiddenを設定している
   width: 60%;
   height: 76px;
   margin: auto;
-  color: #707070;
 }
 
 @media screen and (max-width: 834px) {
   .c-card-button {
     height: 42.5px;
+  }
+}
+
+.c-card-button a {
+  display: block;
+  line-height: 7rem;
+  text-decoration: none;
+  color: #707070;
+}
+
+@media screen and (max-width: 834px) {
+  .c-card-button a {
+    line-height: 37.5px;
   }
 }
 

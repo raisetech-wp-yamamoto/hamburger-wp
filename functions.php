@@ -41,3 +41,9 @@
         }
     }
     add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+    /* the_excerptで取得できる文字数を変更する */
+    function wpdocs_custom_excerpt_length( $length ) {
+        return 200;
+    }
+    add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

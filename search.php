@@ -19,8 +19,8 @@
                                         <div class="c-archive-page-card__img"><?php the_post_thumbnail(); ?></div>
                                         <div class="c-archive-page-card__description">
                                             <h3><?php the_title(); ?></h3>
-                                            <h4>小見出しが入ります</h4>
-                                            <p><?php the_content( '<button class="c-card-button" >詳しく見る</button>' ); ?></p>
+                                            <?php the_excerpt(); ?>
+                                            <button class="c-card-button" ><a href="<?php the_permalink(); ?>">詳しく見る</a></button>
                                         </div>
                                     </div>
                                 </div>
