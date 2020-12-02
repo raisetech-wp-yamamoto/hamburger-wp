@@ -7,6 +7,13 @@
         background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
         background-size: cover;
         width: 50%;
+        img{
+            height: 471px;
+            object-fit: cover;
+            @include mq(md){
+                height:355px;
+            }
+        }
     }
     &__description{
         width: 50%;
@@ -15,7 +22,7 @@
             font-size: 3.6rem;
             margin-bottom: 5rem;
         }
-        h4{
+        h2{
             font-size: 2.4rem;
             margin-bottom: 2rem;
         }
@@ -37,7 +44,7 @@
                 font-size: 2rem;
 
             }
-            h4{
+            h2{
                 font-size: 1.6rem;
             }
         }

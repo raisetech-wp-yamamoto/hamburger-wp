@@ -16,47 +16,20 @@ Template Name: archive
                         <h2>小見出しが入ります</h2>
                         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     </div>
-                    <div class="c-archive-page-card">
-                        <div class="c-archive-page-card__img"></div>
-                        <div class="c-archive-page-card__description">
-                            <h3>チーズバーガー</h3>
-                            <h4>小見出しが入ります</h4>
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-card-button">詳しく見る</button>
-                        </div>
-                    </div>
-                    <div class="c-archive-page-card">
-                        <div class="c-archive-page-card__img"></div>
-                        <div class="c-archive-page-card__description">
-                            <h3>ダブルチーズバーガー</h3>
-                            <h4>小見出しが入ります</h4>
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-card-button">詳しく見る</button>
-                        </div>
-                    </div>
-                    <div class="c-archive-page-card">
-                        <div class="c-archive-page-card__img"></div>
-                        <div class="c-archive-page-card__description">
-                            <h3>スペシャルチーズバーガー</h3>
-                            <h4>小見出しが入ります</h4>
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-card-button">詳しく見る</button>
-                        </div>
-                    </div>
-                    <dl class="c-pagenation">
-                        <li class="c-pagenation__current">page 1/10</li>
-                        <li class="c-pagenation__prev"><a href="archive.html">«</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">1</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">2</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">3</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">4</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">5</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">6</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">7</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">8</a></li>
-                        <li class="c-pagenation__num"><a href="archive.html">9</a></li>
-                        <li class="c-pagenation__next"><a href="archive.html">»</a></li>
-                    </dl>
+                    <?php
+                        $paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
+                        query_posts( $query_string.'&posts_per_page=5&paged='.$paged); //posts_per_pageで記事
+                        if( have_posts() ) :
+                            while( have_posts() ) :
+                                the_post(); 
+                                get_template_part('card'); //パーツ化した部分を呼び出し?>
+                            <?php endwhile;
+                            wp_pagenavi();
+                        else :
+                            ?><p>表示する記事がありません</p><?php
+                        endif;
+                        wp_reset_query();
+                    ?>
                 </div>
             </div>
         </div>

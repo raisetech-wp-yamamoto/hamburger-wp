@@ -3,6 +3,11 @@
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support('admin-bar');
+    add_theme_support( 'post-thumbnails' );
+    register_nav_menus(array(
+        'footer_nav'=>esc_html__('footer navigation', 'rtbread'),
+        'category_nav'=>esc_html__('category navigation', 'rtbread'),
+    ));
 
     //タイトル出力
     function hamburger_title( $title ) {
@@ -24,6 +29,7 @@
     }
     add_action( 'wp_enqueue_scripts', 'hamburger_script' );
 
+    /* 検索結果から固定ページを除外 */
     function SearchFilter($query) {
         if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
             $query->set( 'post_type', 'post' );
