@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -749,7 +749,6 @@ bodyにoverflow:hiddenを設定している
           align-items: center;
   color: #707070;
   margin-top: 5%;
-  list-style: none;
 }
 
 .wp-pagenavi a, .wp-pagenavi span {
@@ -796,31 +795,30 @@ bodyにoverflow:hiddenを設定している
 }
 
 @media screen and (max-width: 375px) {
-  .c-pagenation {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .wp-pagenavi {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .c-pagenation__current {
+  .wp-pagenavi .page, .wp-pagenavi .pages, .wp-pagenavi .current {
     display: none;
   }
-  .c-pagenation__prev {
+  .wp-pagenavi .previouspostslink {
     position: relative;
+    right: 40%;
   }
-  .c-pagenation__prev ::after {
+  .wp-pagenavi .previouspostslink::after {
     position: absolute;
     content: '前へ';
     font-size: 1.6rem;
     top: 3px;
     right: -40px;
   }
-  .c-pagenation__num {
-    display: none;
-  }
-  .c-pagenation__next {
+  .wp-pagenavi .nextpostslink {
     position: relative;
+    left: 40%;
   }
-  .c-pagenation__next ::before {
+  .wp-pagenavi .nextpostslink::before {
     position: absolute;
     content: '次へ';
     font-size: 1.6rem;

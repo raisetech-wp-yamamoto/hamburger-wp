@@ -4,7 +4,6 @@
     align-items: center;
     color: #707070;
     margin-top: 5%;
-    list-style: none;
     a,span{
         display: block;
         text-align: center;
@@ -48,14 +47,15 @@
 
 
 @include mq(sm){
-    .c-pagenation{
-        justify-content: space-between;
-        &__current{
+    .wp-pagenavi{
+        justify-content: center;
+        .page,.pages,.current{
             display: none;
         }
-        &__prev{
+        .previouspostslink{
             position: relative;
-            ::after{
+            right:40%;
+            &::after{
                 position: absolute;
                 content: '前へ';
                 font-size: 1.6rem;
@@ -63,12 +63,10 @@
                 right: -40px;
             }
         }
-        &__num{
-            display: none;
-        }
-        &__next{
+        .nextpostslink{
             position: relative;
-            ::before{
+            left: 40%;
+            &::before{
                 position: absolute;
                 content: '次へ';
                 font-size: 1.6rem;
@@ -76,6 +74,7 @@
                 left: -40px;
             }
         }
+
     }
     
 }

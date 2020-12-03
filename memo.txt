@@ -1,0 +1,147 @@
+Front-page
+
+height:2993px
+	header:217px
+	footer:150px
+	contents:2626px
+		main-visual:530px; 20%
+		content:1447px; 55%
+		map:649px; 25%
+width:1920px
+	header:1553px
+	contents:1553px
+	sidebar:367px;
+
+
+学習メモ
+
+・hrタグで線引く場合、
+上下に空白を与える場合はmarginで指定する。
+paddingでやろうとすると線の下に上下分のpaddingが与えられてしまうみたい。
+また、線の太さはheightで指定できるらしい
+→けど、height指定しても変わらなかった。
+border-widthプロパティでピクセルを指定したら太さが変わった。
+            border-width: 2px;
+            border-color: white;
+
+
+多分、reset.cssでhrタグに対してこのような設定がされているから？かもしれないけど
+いまいちよくわかってない
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+・【質問内容】
+XDデータで指定されているフォント「M+ 1m」を使いたいのですが、
+ブラウザで表示すると「M+ 1c regular」でレンダリングされてしまいます。
+・これはHTMLまたはCSSの記述が間違っているからでしょうか？
+・そもそも日本語の「M+ 1m」フォントというのはWebフォントで指定できるのでしょうか？
+・また、公式ではないところ？でWebフォントで配布しているのを見つけたのですが
+　これを使用しても問題ないのでしょうか？
+　http://mplus-webfonts.osdn.jp/
+【現状のコードや問題箇所の状態】
+画像を添付いたします。
+1枚目：XDデータに乗っているフォント
+2枚目：該当部分を指定したときのDevツールの表示
+3枚目：HTMLファイル:WebフォントCDN読み込み部分の記述
+4枚目：CSSファイル :font-familyを指定している部分
+Github：
+https://github.com/raisetech-wp-yamamoto/hamburger
+（アカウント名はそのうち変更しようと思っています・・・。）
+【試してみたこと・調べた内容】
+M+フォントの公式ページを参考に上記記述を書きました。
+https://mplus-fonts.osdn.jp/about.html
+Webフォントは以下の2つを読み込めば良いようで、
+https://mplus-fonts.osdn.jp/webfonts/basic_latin/mplus_webfonts.css
+https://mplus-fonts.osdn.jp/webfonts/general-j/mplus_webfonts.css
+general-j配下が日本語に対応している部分のようでしたが、
+general-jのCSSの中に「M+ 1m」に該当しそうなものが見当たりません。
+その為、basic_latin内の「M+ M Type-1 (basic latin) Regular」を一番に指定しましたがうまくいきませんでした。
+ちなみにCSSでの指定を
+font-family:'M+ Type-1 (general-j) Regular', sans-serif;
+にしてみても結果は同じでした。
+なので何れにせよ「M+ 1c regular」はM+ Type-1 (general-j) Regularに含まれているのかな？と思っています。
+
+
+【回答】
+公式で共有しているcssですが、どうもMIMEがcssと認識されてないかもですねー。
+font-faceを自ら書いて自分のcssに入れないと駄目かもです。
+http://mplus-webfonts.osdn.jp/
+
+
+
+yamamoto(WP2020年9月)  7時間前
+@ミズモト
+ご対応ありがとうございます。
+公式のCSSからこのフォントをCDNで読み込むのは難しそうなんですね。。
+font-face？をかくなり、別の配布サイトからもってくるなり、別の方法を試してみます。
+それでもうまくいかなければまた質問させていただきます。
+アドバイスいただきありがとうございました。
+
+
+ミズモト:alexa:  7時間前
+そういえば今更なんですが、たしか近いフォントがGoogleFontにあるんでそれでもいいですよみたいなことを聞いたことがあるので、Slack調べてみられるといいかもしれないです！
+
+
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する方法
+https://www.acky.info/tips/css/00031.html
+
+htmlにoverflow:autoを設定した上で
+bodyに対してoverflow:hiddenを設定する
+
+
+
+・iOS Safariでスクロールしただけでリサイズイベントが発生する原因と対処法
+https://qiita.com/tonkotsuboy_com/items/d32ec6e7a1f6f592d415
+
+
+・背景画像の表示位置を指定するプロパティ
+　background-positioin:
+　真ん中ならcenter
+
+
+・nth-childを使う時の注意点
+https://learning.ccc-labo.net/2015/12/nth-child/
+nth-childがうまくいかない、と思っている人へ。（過去の自分を含む）
+投稿者:管理人 2015年12月10日 nth-childがうまくいかない、と思っている人へ。（過去の自分を含む）にコメント
+あなたがやりたいことは実は、「nth-of-type」こっち、かもしれません。
+
+nth-childは該当する要素だけを数えてくれるわけじゃない
+
+
+・chrome開発者ツールで疑似要素::afterを追加して検証する方法
+https://www.it-swarm-ja.tech/ja/css/chrome%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AB%E6%93%AC%E4%BC%BC%E8%A6%81%E7%B4%A0%E3%81%AE%E5%89%8D%E3%81%BE%E3%81%9F%E3%81%AF%E5%BE%8C%E3%82%92%E8%BF%BD%E5%8A%A0%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/1045156636/
+
+【疑問点】
+$('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
+//元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。
+
+↑これでサイドバーのスライドインを実装したけど、margin与えた分の幅が消える理由が分からない。
+
+・user agent stylesheetってなんだ？
+buttonとかのStyleが、bodyに設定したCSSより優先して上書きされている？
+
+
+・アーカイブページのカード内ボタンに対して
+　Height15%を設定してウィンドウ幅を縮めると、
+　親要素のHeightがボタンの高さに応じて大きくなってくれず、
+　ボタンが親要素をはみ出してしまう。（茶色い部分）
+　Heightを指定せず、paddingでボタン要素を膨らませると
+　はみ出さずに親要素の高さも一緒に大きくなってくれる。
+　なんでこうなるの？
+
+.c-card-button {
+    display: block;
+    background-color: white;
+    color: #707070;
+    border-radius: 30px;
+    width: 50%;
+    height: 15%;
+    margin: auto;
+    padding: 10%;
+}
