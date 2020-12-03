@@ -25,5 +25,10 @@
             <dd>紅茶（Ice/Hot）</dd>
             <dd>コーヒー（Ice/Hot）</dd>
         </dl>
+        <?php 
+			wp_nav_menu( array( 
+			'theme_location' => 'category_nav' 
+			)); 
+		?>
     </aside>
 </div>

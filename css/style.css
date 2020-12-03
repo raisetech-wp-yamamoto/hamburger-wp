@@ -363,9 +363,25 @@ bodyにoverflow:hiddenを設定している
   font-size: 1.6rem;
 }
 
-.l-footer__sitemap a {
+.l-footer__sitemap ul#menu-footermenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.l-footer__sitemap ul#menu-footermenu li:not(:last-child)::after {
+  content: "|";
+  font-size: 16px;
+}
+
+.l-footer__sitemap ul#menu-footermenu a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
 }
 
 .c-title {

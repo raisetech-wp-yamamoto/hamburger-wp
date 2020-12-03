@@ -1,7 +1,7 @@
 <?php get_header(); ?>
             <div class="l-main">
                 <div class="p-main-visual p-main-visual--single-page">
-                    <h1 class="c-sub-title">h1 チーズバーガー</h1>
+                    <h1 class="c-sub-title"><?php the_title(); ?></h1>
                 </div>
                 <div class="l-main__single-page-contents">
                     <h2>見出しh2</h2>

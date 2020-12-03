@@ -4,6 +4,7 @@
     add_theme_support( 'title-tag' );
     add_theme_support('admin-bar');
     add_theme_support( 'post-thumbnails' );
+    /*↓を入れると管理画面のメニューからナビゲーションメニューを管理できるようになる。*/
     register_nav_menus(array(
         'footer_nav'=>esc_html__('footer navigation', 'rtbread'),
         'category_nav'=>esc_html__('category navigation', 'rtbread'),

@@ -9,7 +9,7 @@ Template Name: archive
                 <div class="p-main-visual p-main-visual--archive-page">
                     <div class="p-main-visual--archive-page__bg"></div>
                     <h1 class="c-sub-title">Menu:</h1>
-                    <p>チーズバーガー</p>
+                    <p><?php the_archive_title(); ?></p>
                 </div>
                 <div class="l-main__archive-page-contents">
                     <div class="c-page-description">
@@ -18,7 +18,7 @@ Template Name: archive
                     </div>
                     <?php
                         $paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
-                        query_posts( $query_string.'&posts_per_page=5&paged='.$paged); //posts_per_pageで記事
+                        query_posts( $query_string.'&posts_per_page=3&paged='.$paged); //posts_per_pageで記事
                         if( have_posts() ) :
                             while( have_posts() ) :
                                 the_post(); 

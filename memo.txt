@@ -117,6 +117,25 @@ nth-childは該当する要素だけを数えてくれるわけじゃない
 ・chrome開発者ツールで疑似要素::afterを追加して検証する方法
 https://www.it-swarm-ja.tech/ja/css/chrome%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AB%E6%93%AC%E4%BC%BC%E8%A6%81%E7%B4%A0%E3%81%AE%E5%89%8D%E3%81%BE%E3%81%9F%E3%81%AF%E5%BE%8C%E3%82%92%E8%BF%BD%E5%8A%A0%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/1045156636/
 
+・ナビゲーションメニューを管理画面から管理する方法
+https://www.webdesignleaves.com/pr/wp/wp_nav_menus.html
+
+function.phpに
+register_nav_menus(array(
+	'footer_nav'=>('footer navigatoin','rtbread'),//第一引数がニューの位置のスラッグ(キー)、第二引数が説明（多分省略可）
+	'category_nav'=>('category navigation','rtbread'),
+));
+
+って書くと管理画面のメニューからナビゲーションメニューを管理できるようになる。
+使うときは
+<!-- テンプレートファイルのメニューを表示したい場所に記述 -->
+<?php 
+  wp_nav_menu( array( 
+    'theme_location' => 'footer_nav' 
+  ) ); 
+?>
+
+
 【疑問点】
 $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 //元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。
