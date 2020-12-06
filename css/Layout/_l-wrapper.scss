@@ -3,10 +3,10 @@
     max-width:1920px;
     display: flex;
     &__left{
-        width:81%;
+        width:80%;
     }
     &__right{
-        width:19%;
+        width:20%;
         z-index: 200;
     }
 }

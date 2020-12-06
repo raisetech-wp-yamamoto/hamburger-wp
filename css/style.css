@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -219,11 +219,11 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-wrapper__left {
-  width: 81%;
+  width: 80%;
 }
 
 .l-wrapper__right {
-  width: 19%;
+  width: 20%;
   z-index: 200;
 }
 
@@ -338,7 +338,7 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-sidebar {
-  padding: 15%;
+  padding: 10%;
   background-color: #F2EDE9;
   height: 100%;
 }
@@ -504,12 +504,26 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
-.c-menu dt {
+.c-menu * {
+  list-style: none;
+}
+
+.c-menu * a {
+  color: #707070;
+  text-decoration: none;
+  display: block;
+}
+
+.c-menu > li {
   font-size: 2.4rem;
   margin: 4rem 0;
 }
 
-.c-menu dd {
+.c-menu > li > a {
+  margin: 4rem 0;
+}
+
+.c-menu > li .sub-menu li {
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
@@ -662,9 +676,22 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
+@media screen and (max-width: 375px) {
+  .c-archive-page-card__img img {
+    height: 230px;
+  }
+}
+
 .c-archive-page-card__description {
   width: 50%;
   padding: 5%;
+  max-height: 471px;
+}
+
+@media screen and (max-width: 834px) {
+  .c-archive-page-card__description {
+    max-height: 355px;
+  }
 }
 
 .c-archive-page-card__description h3 {
@@ -963,7 +990,11 @@ bodyにoverflow:hiddenを設定している
 .c-front-page-card {
   overflow: hidden;
   background-size: cover;
-  width: 50%;
+  width: 80%;
+}
+
+.c-front-page-card * {
+  text-decoration: none;
 }
 
 .c-front-page-card hr {
@@ -999,6 +1030,10 @@ bodyにoverflow:hiddenを設定している
   padding: 3%;
   font-size: 1.3rem;
   line-height: 2.1rem;
+}
+
+.c-front-page-card:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 375px) {
@@ -1057,11 +1092,12 @@ bodyにoverflow:hiddenを設定している
   z-index: 1;
 }
 
-.p-main-visual--archive-page p {
+.p-main-visual--archive-page p, .p-main-visual--archive-page span {
   z-index: 1;
   color: white;
   margin-left: 1%;
   font-size: 1.6rem;
+  white-space: nowrap;
 }
 
 .p-main-visual--single-page {

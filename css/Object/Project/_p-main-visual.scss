@@ -31,11 +31,12 @@
             font-size: 5rem;
             z-index: 1;
         }
-        p{
+        p,span{
             z-index: 1;
             color: white;
             margin-left: 1%;
             font-size: 1.6rem;
+            white-space: nowrap;
         }
     }
     &--single-page{

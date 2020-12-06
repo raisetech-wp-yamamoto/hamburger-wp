@@ -46,6 +46,10 @@
         if ( $query->is_archive() ) { /* アーカイブページの時に表示件数を3件にセット */
             $query->set( 'posts_per_page', '3' );
         }
+
+        if ( $query->is_search() ) { /* 検索ページの時に表示件数を3件にセット */
+            $query->set( 'posts_per_page', '5' );
+        }
     }
     add_action( 'pre_get_posts', 'change_posts_per_page' );
 
@@ -54,3 +58,14 @@
         return 200;
     }
     add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+    /* the_archive_titleで取得したカテゴリー名やタグ名の前に「カテゴリー：」とか「タグ：」とかが付くのを外す処理 */
+    function custom_archive_title($title){
+        $titleParts=explode(': ',$title);
+        if($titleParts[1]){
+            return $titleParts[1];
+        }
+        return $title;
+    }
+    add_filter('get_the_archive_title','custom_archive_title');
+    

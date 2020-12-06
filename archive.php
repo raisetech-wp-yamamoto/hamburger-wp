@@ -17,8 +17,6 @@ Template Name: archive
                         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     </div>
                     <?php
-                        $paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
-                        query_posts( $query_string.'&posts_per_page=3&paged='.$paged); //posts_per_pageで記事
                         if( have_posts() ) :
                             while( have_posts() ) :
                                 the_post(); 

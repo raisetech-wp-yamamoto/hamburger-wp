@@ -1,7 +1,10 @@
 .c-front-page-card{
     overflow: hidden;
     background-size: cover;
-    width: 50%;
+    width: 80%;
+    *{
+        text-decoration: none;
+    }
     hr{
         border-width: 4px;
         border-color: white;
@@ -30,6 +33,9 @@
             font-size: 1.3rem;
             line-height: 2.1rem;
         }
+    }
+    &:hover{
+        opacity: 0.6;
     }
 }
 
