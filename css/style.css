@@ -220,6 +220,7 @@ bodyにoverflow:hiddenを設定している
 
 .l-wrapper__left {
   width: 80%;
+  background-color: #FFFDFA;
 }
 
 .l-wrapper__right {
@@ -279,7 +280,7 @@ bodyにoverflow:hiddenを設定している
   color: #3C2A10;
 }
 
-.l-main__single-page-contents > p {
+.l-main__single-page-contents p {
   font-size: 1.6rem;
   margin-bottom: 5%;
   line-height: 2.1rem;
@@ -310,16 +311,20 @@ bodyにoverflow:hiddenを設定している
   margin-bottom: 5%;
 }
 
+.l-main__single-page-contents li {
+  font-size: 1.6rem;
+}
+
 .l-main__single-page-contents .c-blockquote {
   margin-bottom: 5%;
 }
 
-.l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
+.l-main__single-page-contents ul > li > ul {
   margin-left: 10%;
 }
 
-.l-main__single-page-contents ul:nth-of-type(3) {
-  margin-bottom: 10%;
+.l-main__single-page-contents ol > li > ol {
+  margin-left: 10%;
 }
 
 @media screen and (max-width: 375px) {
@@ -516,26 +521,27 @@ bodyにoverflow:hiddenを設定している
 
 .c-menu > li {
   font-size: 2.4rem;
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 .c-menu > li > a {
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 .c-menu > li .sub-menu li {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
 }
 
-.c-blockquote {
+blockquote {
   font-size: 1.6rem;
   background-color: #F5F5F5;
   padding: 5%;
+  margin-bottom: 5%;
 }
 
-.c-blockquote p {
+blockquote p {
   font-size: 1.6rem;
   margin-bottom: 10%;
   line-height: 2.1rem;
@@ -972,7 +978,6 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-list {
-  list-style: none;
   margin-left: 5%;
   margin-bottom: 5%;
 }
@@ -1122,7 +1127,7 @@ bodyにoverflow:hiddenを設定している
   font-size: 4rem;
 }
 
-.u-img-height50rem {
+.u-img-height50rem > img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
@@ -1132,13 +1137,13 @@ bodyにoverflow:hiddenを設定している
 }
 
 @media screen and (max-width: 834px) {
-  .u-img-height50rem {
+  .u-img-height50rem > img {
     height: 30rem;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .u-img-height50rem {
+  .u-img-height50rem > img {
     height: 15rem;
   }
 }
@@ -1153,5 +1158,9 @@ bodyにoverflow:hiddenを設定している
   margin-bottom: 5%;
   text-align: center;
   padding: 5%;
+}
+
+.u-height-auto * img {
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
