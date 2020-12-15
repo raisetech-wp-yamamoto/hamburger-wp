@@ -2,12 +2,15 @@
     color: #3C2A10;
     margin-bottom: 5%;
     h2{
-        font-size: 3.0rem;
+        font-size: 3.0vw;
         margin-bottom: 2%;
     }
     p{
-        font-size: 1.6rem;
-        line-height: 2.1rem;
+        font-size: 1.6vw;
+        line-height: 2.1vw;
+        @include mq(md){
+            line-height: 2.1rem;
+        }
     }
 
 }

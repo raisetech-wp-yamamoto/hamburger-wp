@@ -10,6 +10,9 @@
         background-size: cover;
         .c-sub-title{
             font-size: 4rem;
+            @include mq(md){
+                font-size: 3rem;
+            }
         }
     }
     &--archive-page{
@@ -28,8 +31,11 @@
         }
         .c-sub-title{
             font-family: 'Roboto', sans-serif;
-            font-size: 5rem;
+            font-size: 4rem;
             z-index: 1;
+            @include mq(md){
+                font-size: 3rem;
+            }
         }
         p,span{
             z-index: 1;
@@ -40,12 +46,26 @@
         }
     }
     &--single-page{
+        position: relative;
         padding: 15% 0;
-        background-image: url(../image/ham-burger-with-vegetables-1639557.png);
+        background-color: black;
+
+        //background-image: url(../image/ham-burger-with-vegetables-1639557.png);
         background-size: cover;
         background-position: center;
+        img{
+            opacity: 0.7;
+            position: absolute;
+            height: 100%;
+            object-fit: cover;
+        }
         .c-sub-title{
+            position: absolute;
+            z-index: 1;
             font-size: 4rem;
+            @include mq(md){
+                font-size: 3rem;
+            }
         }
     }
     &--about-page{
@@ -55,6 +75,9 @@
         background-position: center;
         .c-sub-title{
             font-size: 4rem;
+            @include mq(md){
+                font-size: 3rem;
+            }
         }
     }
 }

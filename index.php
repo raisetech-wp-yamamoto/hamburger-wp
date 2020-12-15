@@ -37,7 +37,7 @@
                     
                 </div>
                 <div class="c-map">
-                        <img src="<?php echo get_template_directory_uri(); ?>/image/map.png" alt="map">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/image/map.png" alt="map">
                         <div class="c-map__explanation">
                             <h2>見出しが入ります</h2>
                             <hr>

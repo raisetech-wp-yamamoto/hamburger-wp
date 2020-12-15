@@ -1,13 +1,15 @@
 <?php
     //テーマサポート
-    add_theme_support( 'menus' );
+    //add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support('admin-bar');
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'automatic-feed-links' );
+    register_nav_menus( array( 'Primary Menu' => 'menus' ) );
     /*↓を入れると管理画面のメニューからナビゲーションメニューを管理できるようになる。*/
     register_nav_menus(array(
-        'footer_nav'=>esc_html__('footer navigation', 'rtbread'),
-        'category_nav'=>esc_html__('category navigation', 'rtbread'),
+        'footer_nav'=>esc_html__('footer navigation', 'hamburger '),
+        'category_nav'=>esc_html__('category navigation', 'hamburger '),
     ));
 
     //タイトル出力
@@ -69,3 +71,19 @@
     }
     add_filter('get_the_archive_title','custom_archive_title');
     
+    /* グーテンベルグ上でCSSが当たるように設定 */
+    function hamburger_theme_add_editor_styles() {
+        add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
+    }
+    add_action( 'admin_init', 'hamburger_theme_add_editor_styles' );
+
+    /* コメント返信ボタンを押すとブロックの下にコメントフォームが出現する』機能 */
+    function demo_script() {
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
+    }
+    add_action( 'wp_enqueue_scripts', 'demo_script' );
+
+    /* コンテンツの最大幅を定義 */
+    if ( ! isset( $content_width ) ) $content_width = 525;

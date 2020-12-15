@@ -23,7 +23,7 @@
         padding:3%;
         h2{
             font-weight:normal;
-            font-size: 3rem;
+            font-size: 3vw;
         }
         hr{
             width: 7.5rem;
@@ -32,8 +32,11 @@
             margin:5% 0;
         }
         p{
-            font-size: 1.3rem;
-            line-height: 2.1rem;
+            font-size: 1.3vw;
+            line-height: 2.1vw;
+            @include mq(md){
+                line-height: 2.1;
+            }
         }
     }
 }

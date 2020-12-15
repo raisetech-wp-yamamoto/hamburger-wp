@@ -7,7 +7,7 @@
                 $('.l-wrapper__right').removeClass('off');
                 $('.l-wrapper__right').css("display","block");//display:noneにしてあるメニュー部分を表示する
                 $('.l-bg').css("visibility","visible");//display:noneにしてあるメニュー以外を暗くする部分を表示する
-                if(windowWidth > 375){
+                if(windowWidth > 420){
                     $('.l-wrapper__right').animate({'margin-right':'40%'},300).addClass('on');//元々右側40%にずらして置いてあるので右側に40％marginを与えて画面上に表示する。
                 } else {
                     //スマホ版は９０％
@@ -31,7 +31,7 @@
             }
             currentWidth = windowWidth;//現在のサイズをcurrentWidthに記憶しとく
             //375より大きくなったら上のjQueryによってelementに勝手についたstyleを消す。（display:noneとか）
-            if (windowWidth > 375) {
+            if (windowWidth > 420) {
                 console.log("window size over 1030px");
                 $('body *').removeAttr('style');
                 $('.l-wrapper__right').addClass("off");

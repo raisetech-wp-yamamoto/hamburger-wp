@@ -1,10 +1,11 @@
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="<?php language_attributes(); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <div class="l-wrapper">
         <div class="l-wrapper__left">
             <div class="l-bg"></div>

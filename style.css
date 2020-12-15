@@ -12,3 +12,81 @@ Text Domain: wpbeg
 Tested up to: 5.4
 Requires PHP: 7.0
 */
+
+/* WordPressでは投稿に画像を挿入する際、キャプションを登録すると画像の下にキャプション用のテキストが出現する。.wp-captionはその時に画像とテキストをくくるdivタグに付くクラス名です。
+エラーメッセージはこれがCSSによってスタイリングされていませんよーというものです。 */
+.wp-caption {
+    font-size: 1.3rem
+}
+
+/* キャプションテキストのpタグに付くクラスです */
+.wp-caption-text {
+    margin-top: -20px;
+}
+
+/* 固定表示している投稿記事に付与されるクラス */
+.sticky {
+    padding: 20px;
+    background: #f3f3f3;
+}
+
+/* 投稿に gallery というショートコードを挿入すると、ギャラリーを簡単に表示ができます。
+このギャラリーは編集することで、画像を入れ替えたりするのですが、ここで使われるのが .gallery-caption になります。 */
+
+.gallery-caption {
+    font-size: 1.3rem;
+}
+
+/* コメント欄で管理人のコメントに付くクラスです。 */
+.bypostauthor {
+    padding: 20px;
+    background: #f0f8ff;
+}
+
+/* 投稿に画像を挿入する際の『配置（左、右、中央）』によって付与されるクラスです。 */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+        white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* これはアクセシビリティに関するクラスで、
+スクリーンリーダーなどで読ませる場合には必要になるが、デザイン上フロント側で見せない物がある時などに使うクラスです。 */
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}

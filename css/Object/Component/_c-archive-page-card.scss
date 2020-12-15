@@ -10,6 +10,7 @@
         img{
             height: 471px;
             object-fit: cover;
+            vertical-align: bottom;
             @include mq(md){
                 height:355px;
             }
@@ -27,7 +28,7 @@
         }
         
         h3{
-            font-size: 3.6rem;
+            font-size: 3.5rem;
             margin-bottom: 5rem;
         }
         h2{
@@ -38,6 +39,9 @@
             font-size: 1.6rem;
             margin-bottom: 20%;
             line-height: 2.1rem;
+            @include mq(md){
+                line-height: 2.1rem;
+            }
         }
         .more-link{
             text-decoration: none;

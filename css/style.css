@@ -204,7 +204,7 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .l-header .c-title--side-menu {
     font-size: 2rem;
   }
@@ -212,7 +212,6 @@ bodyにoverflow:hiddenを設定している
 
 .l-wrapper {
   position: relative;
-  max-width: 1920px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,16 +232,16 @@ bodyにoverflow:hiddenを設定している
     width: 100%;
   }
   .l-wrapper__right {
+    height: 10vh;
+    min-height: calc(100% + 100px);
     display: none;
     width: 40%;
     position: absolute;
-    height: calc(100% + 100px);
-    /*フッターまで貫通してメニューを出すから+100px*/
     right: -40%;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .l-wrapper__right {
     width: 90%;
     right: -90%;
@@ -269,9 +268,15 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-main__archive-page-contents > p {
-  font-size: 1.6rem;
+  font-size: 1.6vw;
   margin-bottom: 5%;
-  line-height: 2.1rem;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__archive-page-contents > p {
+    line-height: 2.1rem;
+  }
 }
 
 .l-main__single-page-contents {
@@ -281,38 +286,51 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-main__single-page-contents p {
-  font-size: 1.6rem;
+  font-size: 1.6vw;
   margin-bottom: 5%;
-  line-height: 2.1rem;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents p {
+    line-height: 2.1rem;
+  }
 }
 
 .l-main__single-page-contents h2 {
-  font-size: 3.6rem;
+  font-size: 3.6vw;
   margin-bottom: 5%;
 }
 
 .l-main__single-page-contents h3 {
-  font-size: 2.8rem;
+  font-size: 2.8vw;
   margin-bottom: 5%;
 }
 
 .l-main__single-page-contents h4 {
-  font-size: 2rem;
+  font-size: 2vw;
   margin-bottom: 5%;
 }
 
 .l-main__single-page-contents h5 {
-  font-size: 2rem;
+  font-size: 2vw;
   margin-bottom: 5%;
 }
 
 .l-main__single-page-contents h6 {
-  font-size: 2rem;
+  font-size: 2vw;
   margin-bottom: 5%;
 }
 
 .l-main__single-page-contents li {
-  font-size: 1.6rem;
+  font-size: 1.6vw;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents li {
+    line-height: 2.1rem;
+  }
 }
 
 .l-main__single-page-contents .c-blockquote {
@@ -327,13 +345,13 @@ bodyにoverflow:hiddenを設定している
   margin-left: 10%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
     margin-left: 5%;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .l-main__front-page-contents {
     display: block;
   }
@@ -355,7 +373,6 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-footer {
-  max-width: 1920px;
   height: 100px;
   background-color: #9D8670;
   color: white;
@@ -405,14 +422,14 @@ bodyにoverflow:hiddenを設定している
 
 .c-title--side-menu {
   color: #707070;
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   margin-bottom: 30%;
 }
 
 .c-title--front-page-card {
   white-space: nowrap;
   color: white;
-  font-size: 6rem;
+  font-size: 6vw;
   padding: 5%;
 }
 
@@ -434,7 +451,7 @@ bodyにoverflow:hiddenを設定している
   outline: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-button {
     display: block;
     margin: 0 auto 5%;
@@ -457,7 +474,7 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-grid-img {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -525,13 +542,19 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-menu > li > a {
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 
 .c-menu > li .sub-menu li {
-  font-size: 1.8rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-menu > li .sub-menu li {
+    margin-bottom: 3rem;
+  }
 }
 
 blockquote {
@@ -606,7 +629,7 @@ blockquote p {
   color: white;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-pagenation {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -646,13 +669,19 @@ blockquote p {
 }
 
 .c-page-description h2 {
-  font-size: 3.0rem;
+  font-size: 3.0vw;
   margin-bottom: 2%;
 }
 
 .c-page-description p {
-  font-size: 1.6rem;
-  line-height: 2.1rem;
+  font-size: 1.6vw;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .c-page-description p {
+    line-height: 2.1rem;
+  }
 }
 
 .c-archive-page-card {
@@ -674,6 +703,7 @@ blockquote p {
   height: 471px;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 834px) {
@@ -682,7 +712,7 @@ blockquote p {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-archive-page-card__img img {
     height: 230px;
   }
@@ -701,7 +731,7 @@ blockquote p {
 }
 
 .c-archive-page-card__description h3 {
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   margin-bottom: 5rem;
 }
 
@@ -714,6 +744,12 @@ blockquote p {
   font-size: 1.6rem;
   margin-bottom: 20%;
   line-height: 2.1rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-archive-page-card__description p {
+    line-height: 2.1rem;
+  }
 }
 
 .c-archive-page-card__description .more-link {
@@ -729,7 +765,7 @@ blockquote p {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-archive-page-card {
     display: block;
   }
@@ -843,7 +879,7 @@ blockquote p {
   color: white;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .wp-pagenavi {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -883,7 +919,7 @@ blockquote p {
 
 .c-table tr > td {
   border: solid 1px #707070;
-  font-size: 1.6rem;
+  font-size: 2vw;
   padding: 5%;
 }
 
@@ -956,7 +992,7 @@ blockquote p {
 
 .c-map__explanation h2 {
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 3vw;
 }
 
 .c-map__explanation hr {
@@ -967,8 +1003,14 @@ blockquote p {
 }
 
 .c-map__explanation p {
-  font-size: 1.3rem;
-  line-height: 2.1rem;
+  font-size: 1.3vw;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .c-map__explanation p {
+    line-height: 2.1;
+  }
 }
 
 @media screen and (max-width: 834px) {
@@ -977,16 +1019,20 @@ blockquote p {
   }
 }
 
+.c-post-link {
+  text-align: center;
+}
+
 .c-list {
   margin-left: 5%;
   margin-bottom: 5%;
 }
 
 .c-list li {
-  font-size: 1.6rem;
+  font-size: 2vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-list {
     margin-left: 0;
   }
@@ -1028,20 +1074,26 @@ blockquote p {
 
 .c-front-page-card__explanation h3 {
   padding: 3%;
-  font-size: 2rem;
+  font-size: 2.5vw;
 }
 
 .c-front-page-card__explanation p {
   padding: 3%;
-  font-size: 1.3rem;
-  line-height: 2.1rem;
+  font-size: 1.3vw;
+  line-height: 2.1vw;
+}
+
+@media screen and (max-width: 834px) {
+  .c-front-page-card__explanation p {
+    line-height: 2.1rem;
+  }
 }
 
 .c-front-page-card:hover {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .c-front-page-card {
     width: 100%;
   }
@@ -1074,6 +1126,12 @@ blockquote p {
   font-size: 4rem;
 }
 
+@media screen and (max-width: 834px) {
+  .p-main-visual--front-page .c-sub-title {
+    font-size: 3rem;
+  }
+}
+
 .p-main-visual--archive-page {
   padding: 5% 0;
   background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
@@ -1093,8 +1151,14 @@ blockquote p {
 
 .p-main-visual--archive-page .c-sub-title {
   font-family: 'Roboto', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   z-index: 1;
+}
+
+@media screen and (max-width: 834px) {
+  .p-main-visual--archive-page .c-sub-title {
+    font-size: 3rem;
+  }
 }
 
 .p-main-visual--archive-page p, .p-main-visual--archive-page span {
@@ -1106,14 +1170,31 @@ blockquote p {
 }
 
 .p-main-visual--single-page {
+  position: relative;
   padding: 15% 0;
-  background-image: url(../image/ham-burger-with-vegetables-1639557.png);
+  background-color: black;
   background-size: cover;
   background-position: center;
 }
 
+.p-main-visual--single-page img {
+  opacity: 0.7;
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-main-visual--single-page .c-sub-title {
+  position: absolute;
+  z-index: 1;
   font-size: 4rem;
+}
+
+@media screen and (max-width: 834px) {
+  .p-main-visual--single-page .c-sub-title {
+    font-size: 3rem;
+  }
 }
 
 .p-main-visual--about-page {
@@ -1125,6 +1206,12 @@ blockquote p {
 
 .p-main-visual--about-page .c-sub-title {
   font-size: 4rem;
+}
+
+@media screen and (max-width: 834px) {
+  .p-main-visual--about-page .c-sub-title {
+    font-size: 3rem;
+  }
 }
 
 .u-img-height50rem > img {
@@ -1142,7 +1229,7 @@ blockquote p {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .u-img-height50rem > img {
     height: 15rem;
   }
