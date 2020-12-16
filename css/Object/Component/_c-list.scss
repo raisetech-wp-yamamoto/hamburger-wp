@@ -2,7 +2,10 @@
     margin-left: 5%;
     margin-bottom: 5%;
     li{
-        font-size: 2vw;
+        font-size: 2rem;
+        @include mq(md){
+            font-size: 2vw;
+        }
     }
     @include mq(sm){
         margin-left: 0;

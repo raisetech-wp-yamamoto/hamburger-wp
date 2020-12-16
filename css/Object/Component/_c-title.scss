@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
     &--header{
         color: #707070;
-        font-size: 5.5rem;
+        font-size: 5rem;
         a{
             text-decoration: none;
             color: #707070;
@@ -10,13 +10,19 @@
     }
     &--side-menu{
         color: #707070;
-        font-size: 2.8rem;
-        margin-bottom:30%;
+        font-size: 2.5rem;
+        margin-bottom:20%;
+        @include mq(md){
+            margin-bottom:10%;
+        }
     }
     &--front-page-card{
         white-space: nowrap;
         color: white;
-        font-size: 6vw;
+        font-size: 6rem;
+        @include mq(md){
+            font-size: 6vw;
+        }
         padding:5%;
     }
 }

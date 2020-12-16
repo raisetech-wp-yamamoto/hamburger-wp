@@ -37,10 +37,10 @@
         }
         p{
             font-size: 1.6rem;
-            margin-bottom: 20%;
+            margin-bottom: 17%;
             line-height: 2.1rem;
             @include mq(md){
-                line-height: 2.1rem;
+                font-size: 2.1vw;
             }
         }
         .more-link{
@@ -53,11 +53,11 @@
     .c-archive-page-card{
         &__description{
             h3{
-                font-size: 2rem;
+                font-size: 4vw;
 
             }
             h2{
-                font-size: 1.6rem;
+                font-size: 2.5vw;
             }
         }
     }

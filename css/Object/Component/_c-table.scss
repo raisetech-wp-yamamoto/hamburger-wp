@@ -3,7 +3,10 @@
     margin-bottom: 5%;
     tr>td{
         border: solid 1px #707070;
-        font-size: 2vw;
+        font-size: 2rem;
+        @include mq(md){
+            font-size: 2vw;
+        }
         padding: 5%;        
     }
     tr>:nth-child(1){

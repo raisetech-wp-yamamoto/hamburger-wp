@@ -41,6 +41,9 @@
             z-index: 1;
             color: white;
             margin-left: 1%;
+            @include mq(md){
+                margin-left: 5%;
+            }
             font-size: 1.6rem;
             white-space: nowrap;
         }

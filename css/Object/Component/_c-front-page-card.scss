@@ -26,14 +26,17 @@
         background-color: rgba(255,255,255, 0.8);
         h3{
             padding:3%;
-            font-size: 2.5vw;
+            font-size: 2.5rem;
+            @include mq(md){
+                font-size: 2.5vw;
+            }
         }
         p{
             padding:3%;
-            font-size: 1.3vw;
-            line-height: 2.1vw;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
             @include mq(md){
-                line-height: 2.1rem;
+                font-size: 2vw;
             }
         }
     }

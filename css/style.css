@@ -168,7 +168,7 @@ bodyにoverflow:hiddenを設定している
   margin-bottom: 0;
   /*サイドメニュー上に表示してた時のmarginを解除*/
   right: 3%;
-  top: 1%;
+  top: 15px;
 }
 
 .l-header .c-search {
@@ -218,12 +218,12 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-wrapper__left {
-  width: 80%;
+  width: 76%;
   background-color: #FFFDFA;
 }
 
 .l-wrapper__right {
-  width: 20%;
+  width: 24%;
   z-index: 200;
   background-color: #F2EDE9;
 }
@@ -268,69 +268,96 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-main__archive-page-contents > p {
-  font-size: 1.6vw;
+  font-size: 1.6rem;
   margin-bottom: 5%;
-  line-height: 2.1vw;
+  line-height: 2.1rem;
 }
 
 @media screen and (max-width: 834px) {
   .l-main__archive-page-contents > p {
-    line-height: 2.1rem;
+    font-size: 1.6vw;
   }
 }
 
 .l-main__single-page-contents {
   background-color: #FFFDFA;
   padding: 5%;
+}
+
+.l-main__single-page-contents * {
   color: #3C2A10;
 }
 
 .l-main__single-page-contents p {
-  font-size: 1.6vw;
+  font-size: 1.6rem;
   margin-bottom: 5%;
-  line-height: 2.1vw;
+  line-height: 2.1rem;
 }
 
 @media screen and (max-width: 834px) {
   .l-main__single-page-contents p {
-    line-height: 2.1rem;
+    font-size: 2.1vw;
   }
 }
 
 .l-main__single-page-contents h2 {
-  font-size: 3.6vw;
+  font-size: 3.6rem;
   margin-bottom: 5%;
-}
-
-.l-main__single-page-contents h3 {
-  font-size: 2.8vw;
-  margin-bottom: 5%;
-}
-
-.l-main__single-page-contents h4 {
-  font-size: 2vw;
-  margin-bottom: 5%;
-}
-
-.l-main__single-page-contents h5 {
-  font-size: 2vw;
-  margin-bottom: 5%;
-}
-
-.l-main__single-page-contents h6 {
-  font-size: 2vw;
-  margin-bottom: 5%;
-}
-
-.l-main__single-page-contents li {
-  font-size: 1.6vw;
-  line-height: 2.1vw;
 }
 
 @media screen and (max-width: 834px) {
-  .l-main__single-page-contents li {
-    line-height: 2.1rem;
+  .l-main__single-page-contents h2 {
+    font-size: 3.6vw;
   }
+}
+
+.l-main__single-page-contents h3 {
+  font-size: 2.8rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents h3 {
+    font-size: 2.8vw;
+  }
+}
+
+.l-main__single-page-contents h4 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents h4 {
+    font-size: 2vw;
+  }
+}
+
+.l-main__single-page-contents h5 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents h5 {
+    font-size: 2vw;
+  }
+}
+
+.l-main__single-page-contents h6 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .l-main__single-page-contents h6 {
+    font-size: 2vw;
+  }
+}
+
+.l-main__single-page-contents li {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 .l-main__single-page-contents .c-blockquote {
@@ -412,7 +439,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-title--header {
   color: #707070;
-  font-size: 5.5rem;
+  font-size: 5rem;
 }
 
 .c-title--header a {
@@ -422,15 +449,27 @@ bodyにoverflow:hiddenを設定している
 
 .c-title--side-menu {
   color: #707070;
-  font-size: 2.8rem;
-  margin-bottom: 30%;
+  font-size: 2.5rem;
+  margin-bottom: 20%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-title--side-menu {
+    margin-bottom: 10%;
+  }
 }
 
 .c-title--front-page-card {
   white-space: nowrap;
   color: white;
-  font-size: 6vw;
+  font-size: 6rem;
   padding: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-title--front-page-card {
+    font-size: 6vw;
+  }
 }
 
 @media screen and (max-width: 834px) {
@@ -669,18 +708,24 @@ blockquote p {
 }
 
 .c-page-description h2 {
-  font-size: 3.0vw;
+  font-size: 3rem;
   margin-bottom: 2%;
 }
 
+@media screen and (max-width: 834px) {
+  .c-page-description h2 {
+    font-size: 3vw;
+  }
+}
+
 .c-page-description p {
-  font-size: 1.6vw;
-  line-height: 2.1vw;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 @media screen and (max-width: 834px) {
   .c-page-description p {
-    line-height: 2.1rem;
+    font-size: 2.1vw;
   }
 }
 
@@ -742,13 +787,13 @@ blockquote p {
 
 .c-archive-page-card__description p {
   font-size: 1.6rem;
-  margin-bottom: 20%;
+  margin-bottom: 17%;
   line-height: 2.1rem;
 }
 
 @media screen and (max-width: 834px) {
   .c-archive-page-card__description p {
-    line-height: 2.1rem;
+    font-size: 2.1vw;
   }
 }
 
@@ -758,10 +803,10 @@ blockquote p {
 
 @media screen and (max-width: 834px) {
   .c-archive-page-card__description h3 {
-    font-size: 2rem;
+    font-size: 4vw;
   }
   .c-archive-page-card__description h2 {
-    font-size: 1.6rem;
+    font-size: 2.5vw;
   }
 }
 
@@ -803,7 +848,7 @@ blockquote p {
 
 .c-search__button {
   cursor: pointer;
-  margin-left: 14px;
+  margin-left: 5px;
   width: 80px;
   height: 40px;
   background-color: #F2EDE9;
@@ -919,8 +964,14 @@ blockquote p {
 
 .c-table tr > td {
   border: solid 1px #707070;
-  font-size: 2vw;
+  font-size: 2rem;
   padding: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-table tr > td {
+    font-size: 2vw;
+  }
 }
 
 .c-table tr > :nth-child(1) {
@@ -1029,7 +1080,13 @@ blockquote p {
 }
 
 .c-list li {
-  font-size: 2vw;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-list li {
+    font-size: 2vw;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -1074,18 +1131,24 @@ blockquote p {
 
 .c-front-page-card__explanation h3 {
   padding: 3%;
-  font-size: 2.5vw;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 834px) {
+  .c-front-page-card__explanation h3 {
+    font-size: 2.5vw;
+  }
 }
 
 .c-front-page-card__explanation p {
   padding: 3%;
-  font-size: 1.3vw;
-  line-height: 2.1vw;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 @media screen and (max-width: 834px) {
   .c-front-page-card__explanation p {
-    line-height: 2.1rem;
+    font-size: 2vw;
   }
 }
 
@@ -1167,6 +1230,12 @@ blockquote p {
   margin-left: 1%;
   font-size: 1.6rem;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 834px) {
+  .p-main-visual--archive-page p, .p-main-visual--archive-page span {
+    margin-left: 5%;
+  }
 }
 
 .p-main-visual--single-page {
