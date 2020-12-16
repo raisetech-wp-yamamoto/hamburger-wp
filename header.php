@@ -7,8 +7,9 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="l-wrapper">
+        <div class="l-bg"></div>
         <div class="l-wrapper__left">
-            <div class="l-bg"></div>
+
             <header class="l-header">
                 <h2 id="menu" class="c-title c-title--side-menu">Menu</h2>
                 <h2 class="c-title c-title--header"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h2>

@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -225,6 +225,7 @@ bodyにoverflow:hiddenを設定している
 .l-wrapper__right {
   width: 20%;
   z-index: 200;
+  background-color: #F2EDE9;
 }
 
 @media screen and (max-width: 834px) {
@@ -232,7 +233,6 @@ bodyにoverflow:hiddenを設定している
     width: 100%;
   }
   .l-wrapper__right {
-    height: 10vh;
     min-height: calc(100% + 100px);
     display: none;
     width: 40%;
